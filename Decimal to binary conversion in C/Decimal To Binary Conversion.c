@@ -1,5 +1,14 @@
 #include<stdio.h>
-long int bin(long int);
+//FUNCTION BIN
+
+long int bin(long int x)
+{
+	if(x==0)
+		return(0);
+	else
+		return(x%2+10*bin(x/2));	
+}
+
 int main()
 {
 	long int n;
@@ -10,11 +19,3 @@ int main()
 }
 
 
-//FUNCTION BIN
-long int bin(long int x)
-{
-	if(x==0)
-		return(0);
-	else
-		return(x%2+10*bin(x/2));	
-}
